@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random</title>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <!-- Blog Entries Column -->
+          <div class="col-md-8 mt-3 left" style="font-style:bold;">
+              {% for post in posts %}
+                <table cellpadding="5" cellspacing="5">
+                  <tr>
+                     <td>{{ post.EmployeeID }}</td>
+                     <td style="padding-right: 10px">{{ post.EmployeeName }}</td>
+                     <td style="padding-right: 10px">{{ post.Contact }}</td>
+                     <td style="padding-right: 10px">{{ post.Address }}</td>
+                     <br>
+                  </tr>
+                </table>
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+
+</body>
+</html>
